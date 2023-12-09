@@ -12,16 +12,16 @@ Please note that this may create conflicts with your existing FFmpeg installatio
 ## HOW TO RUN:
 
 Clone the repository and change into the directory: 
-```
+```sh
 git clone https://github.com/dng-nguyn/FFmpeg-auto-updater.git
 cd FFmpeg-auto-updater
 ```
 Add execution permission for the script:
-```
+```sh
 chmod +x script.sh
 ```
 Run the script:
-```
+```sh
 ./script.sh
 ```
 Note that this only run the script once, and not automatically update daily.
@@ -31,11 +31,11 @@ Note that this only run the script once, and not automatically update daily.
 To add a cron entry, please refer to other guides for your updating preferences. This is an example to update your ffmpeg every day at 3AM:
 
 Opening the cron editor:
-```
+```sh
 crontab -e
 ```
 Add this entry to the file:
-```
+```sh
 0 3 * * * /bin/bash /path/to/script.sh
 ```
 Please note that you need to modify the `/path/to/script.sh` to your actual path of the script.
