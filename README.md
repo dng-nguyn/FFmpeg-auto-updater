@@ -1,11 +1,11 @@
 # FFmpeg-auto-updater
-This script updates FFmpeg automatically by downloading BtbN's daily builds using a linux bash file.
+This script updates FFmpeg automatically by downloading BtbN's FFmpeg daily builds using a linux bash file.
 ## BEFORE USING:
 Please take a look at the script and modify the environment variables to your preferences.
 
-This script relies on cron to update ffmpeg daily by adding a `crontab -e` entry, as this script itself does not automatically run on its own.
+This script relies on cron to update FFmpeg daily by adding a `crontab -e` entry, as this script itself does not automatically run on its own.
 
-The files are taken from [BtbN's daily builds](https://github.com/BtbN/FFmpeg-Builds), with the default provided build being latest linux64 GPL. This can be change by modifying the script's environment variable `nano ./script.sh`
+The files are taken from [BtbN's daily builds](https://github.com/BtbN/FFmpeg-Builds), with the default provided build being latest linux64 GPL. This can be changed by modifying the script's environment variable `nano ./script.sh`
 
 Please note that this may create conflicts with your existing FFmpeg installation and may cause unexpected behaviors with certain applications that also use FFmpeg. This script defaults to installing FFmpeg on the user's local directory `/home/$USER/.local/bin`.
 
