@@ -3,7 +3,7 @@ This script updates FFmpeg automatically by downloading BtbN's FFmpeg daily buil
 ## BEFORE USING:
 Please take a look at the script and modify the environment variables to your preferences.
 
-This script relies on cron to update FFmpeg daily by adding a `crontab -e` entry, as this script itself does not automatically run on its own.
+This script relies on cron to update FFmpeg daily by adding a [crontab -e](https://github.com/dng-nguyn/FFmpeg-auto-updater#adding-a-cron-entry) entry, as this script itself does not automatically run on its own.
 
 The files are taken from [BtbN's daily builds](https://github.com/BtbN/FFmpeg-Builds), with the default provided build being latest linux64 GPL. This can be changed by modifying the script's environment variable `nano ./script.sh`
 
