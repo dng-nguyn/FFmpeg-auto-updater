@@ -36,6 +36,6 @@ crontab -e
 ```
 Add this entry to the file:
 ```sh
-0 3 * * * /bin/bash /path/to/script.sh
+0 3 * * * /path/to/script.sh
 ```
 Please note that you need to modify the `/path/to/script.sh` to your actual path of the script.
