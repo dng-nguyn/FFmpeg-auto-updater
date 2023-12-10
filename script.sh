@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Change to script directory
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$script_dir"
 # Define the URLs and paths
 FFMPEG_URL="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz"
 LOG_FILE="ffmpeg_auto_install_log.txt"
