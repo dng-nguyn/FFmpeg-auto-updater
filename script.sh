@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 # Define the URLs and paths
 FFMPEG_URL="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz"
 LOG_FILE="ffmpeg_auto_install_log.txt"
-INSTALL_PATH="/media/dinhcap/hdd/nc/replays/"
+INSTALL_PATH="/"
 MAX_RETRIES=6  # Number of retries
 INITIAL_RETRY_INTERVAL=300  # Initial retry interval in seconds (5 minutes)
 MAX_RETRY_INTERVAL=1800  # Maximum retry interval in seconds (30 minutes)
