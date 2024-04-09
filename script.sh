@@ -1,12 +1,11 @@
 #!/bin/bash
 
 # Change to script directory
-script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$script_dir"
+cd "$(dirname "$0")"
 # Define the URLs and paths
 FFMPEG_URL="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz"
 LOG_FILE="ffmpeg_auto_install_log.txt"
-INSTALL_PATH="/home/$(whoami)/.local/bin/"
+INSTALL_PATH="/media/dinhcap/hdd/nc/replays/"
 MAX_RETRIES=6  # Number of retries
 INITIAL_RETRY_INTERVAL=300  # Initial retry interval in seconds (5 minutes)
 MAX_RETRY_INTERVAL=1800  # Maximum retry interval in seconds (30 minutes)
@@ -44,11 +43,7 @@ download_with_retry
 
 # Extract the tar.xz file
 log "Extracting ffmpeg.tar.xz..."
-(tar -xf ffmpeg.tar.xz >> "$LOG_FILE" 2>&1) || { log "Extraction failed."; exit 1; }
-
-# Move executables to the specified path
-log "Moving executables to $INSTALL_PATH..."
-(mv ffmpeg*/bin/* "$INSTALL_PATH" >> "$LOG_FILE" 2>&1) || { log "Move failed."; exit 1; }
+(tar -xf ffmpeg.tar.xz ffmpeg-master-latest-linux64-gpl/bin/ffmpeg -C "$INSTALL_PATH" >> "$LOG_FILE" 2>&1) || { log "Extraction failed."; exit 1; }
 
 # Clean up: remove downloaded files and extracted directory
 log "Cleaning up..."
